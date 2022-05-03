@@ -2,10 +2,9 @@ package com.laptopshop.controller;
 
 
 import java.util.List;
-<<<<<<< HEAD
+
 import java.util.Optional;
-=======
->>>>>>> d996974822b837555bc9e7ee3b978c138b245708
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,7 +49,7 @@ public class UserDetailControlle {
 		User userObj = userRepository.save(user);
 		return userObj;
 	}
-<<<<<<< HEAD
+
 	@PostMapping("users/login")
 	public User login (@RequestBody User user) throws Exception {
 		Optional<User> userObj = userRepository.findByEmailAndPassword(user.getEmail(),user.getPassword());
@@ -64,7 +63,7 @@ public class UserDetailControlle {
 	}
 	}
 	@PostMapping("users/list")
-=======
+
 	@GetMapping("users/login")
 	public User login(
 			@RequestParam("email") String email,
@@ -78,7 +77,7 @@ public class UserDetailControlle {
 	}
 	
 	@GetMapping("users/list")
->>>>>>> d996974822b837555bc9e7ee3b978c138b245708
+
 	public List<User> getAllUsers() {
 		List<User> userList = userRepository.findAll();
 		return userList;
@@ -89,13 +88,12 @@ public class UserDetailControlle {
 		userRepository.deleteById(id);		 
 	}
 	
-<<<<<<< HEAD
-=======
+
 	@GetMapping("users/change-password/{id}")
 	public void changePassword(@PathVariable("id") Integer id, @RequestParam("password") String password) {
 		userRepository.changePassword(id, password);
 	}
->>>>>>> d996974822b837555bc9e7ee3b978c138b245708
+
 }
 
 
