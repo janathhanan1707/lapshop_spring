@@ -91,7 +91,7 @@ public class UserDetailControlle {
 
 	@GetMapping("users/change-password/{id}")
 	public void changePassword(@PathVariable("id") Integer id, @RequestParam("password") String password) {
-		userRepository.changePassword(id, password);
+		//userRepository.changePassword(id, password);
 	}
 
 }
